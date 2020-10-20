@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href='/css/contentstyle.css' type='text/css'>
+<META http-equiv = "Pragma" content = "no-cache">
+<style type="text/css">
+.divErrorInfo
+{
+font-family:Arial;
+color:#FF0000;
+font-size:20px;
+}
+</style>
+<script language="JavaScript" src="/lang/msgerrcode.res"></script>
+<SCRIPT language = "javascript">
+document.write('<title>' + eval("gVarTitle") + '</title>');
+var ErrInfo = 1074266212;
+function Init()
+{
+var ErrID = document.getElementById("err_info");
+if (ErrInfo >= gPubErrStrArray.length)
+{
+ErrInfo = 0;
+}
+ErrID.innerHTML = gPubErrStrArray[ErrInfo];
+}
+function btnTryAgain()
+{
+if (typeof(top.previousPage) == 'undefined')
+{
+location.replace('/');
+}
+else if (top.previousPage != '')
+{
+var url = top.previousPage;
+top.previousPage = '';
+location.replace(url);
+}
+else
+{
+this.history.back();
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY onLoad="Init();" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+<div align='center'>
+<br><br><br><DIV id='err_info' class="divErrorInfo">Unknown</DIV></TD><hr noshade width='500' size='1'>
+<a href='JavaScript: btnTryAgain();' style="font-family:Arial;font-size:18px; "><script language="JavaScript" type="text/javascript">document.write(eval("gVarTryAgain"));</script></a>
+</div>
+</BODY>
+</HTML>

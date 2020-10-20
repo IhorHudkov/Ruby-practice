@@ -1,0 +1,1 @@
+50.downto(-50) { |x| puts x }

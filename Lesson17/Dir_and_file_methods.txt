@@ -1,0 +1,6 @@
+﻿Dir.entries "C:/Projects" #=> [".", "..", "Lesson17", "bak"]
+Dir.chdir 'C:/Projects' #=> изменяет текуюую директорию
+Dir.pwd #=> PrintWorkDirectory
+
+File.chmod 777 "Test.txt" #=> for unix systems
+(chmod 644 file_name.aaa) #=> in unix systems comand prompt 755
